@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Prompt:wght@600&family=Roboto&display=swap');
+
+:root {
+    --main-color: #2b5be0;
+    --background: rgb(216, 214, 214);
+}
+
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template: 1fr 4fr / minmax(250px, 1fr) 5fr;
+    height: 100vh;
+}
+
+.header {
+    display: grid;
+    grid-template: repeat(2,1fr) / minmax(300px, 5fr) repeat(3, minmax(40px, 130px));
+    align-items: center;
+    justify-content: stretch;
+    padding: 0px 3%;
+}
+
+.header .searchbar {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+}
+
+.header input[type=text] {
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(216, 214, 214);
+    width: 80%;
+    padding: 6px;
+}
+
+.header .profile {
+    grid-area: 1 / 2 / 2 / -1;
+    grid-template-columns: auto auto;
+    justify-content: end;
+    padding-right: 20%;
+    gap: 20px;
+}
+
+.header .greet {
+    grid-area: 2 / 1 / 3 / 2;
+    grid-template-columns: auto 1fr;
+}
+
+.header .greet,
+.header .profile {
+    display: grid;
+    
+    align-items: center;
+    font-weight: 800;
+}
+
+.header .greet p:nth-child(3) {
+    font-size: 26px;
+}
+
+.greet img {
+    grid-row: 1 / 3;
+    padding-right: 20px;
+}
+
+.header button {
+    border: none;
+    border-radius: 2rem;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: 800;
+    font-size: 1em;
+    padding: 10px;
+    width: 80%;
+}
+
+.sidebar {
+    background-color: var(--main-color);
+    grid-area: 1 / 1 / 3 / 2;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    align-content: start;
+    gap: 50px;
+}
+
+.dash-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.dash-item p {
+    align-self: center;
+    padding-left: 10px;
+}
+
+.main {
+    background-color: var(--background);
+    display: grid;
+    padding: 10px;
+    grid-template: 3fr 2fr / auto clamp(250px, 30%, 400px);
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+.main-item.projects {
+    grid-area: 1 / 1 / 3 / 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-rows: auto 1fr;
+    grid-auto-rows: 1fr;
+    gap: 20px;
+}
+
+.main-item .project-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    border: none;
+    border-left: 8px solid orange;
+}
+
+.announcements,
+.trending {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 0.9em;
+}
+
+.main-item.announcements {
+    padding: 30px;
+    gap: 20px;
+    font-size: 0.9em;
+    font-weight: 100;
+}
+
+.main-title {
+    grid-column: 1 / -1;
+    font-size: 1.5rem;
+}
+
+.box {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.main-item.trending {
+    gap: 10px;
+    padding: 20px 30px;
+}
+
+.main-item .user {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    place-content: center;
+    gap: 15px;
+}
+
+.user div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.discription {
+    color: rgb(85, 85, 85);
+}
+
+.dash-item {
+    display: flex;
+    font-size: 22px;
+    font-weight: 800;
+    color: #f0f9ff;
+    padding-left: 10px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 900;
+    color: #f0f9ff;
+    padding: 30px;
+}
+
+.icon {
+    fill: white;
+}
+
+.sidebar svg {
+    width: 1.2em;
+}
+
+.header svg {
+    width: 2em;
+}
+
+.line {
+    height: 1px;
+    background-color: rgb(143, 143, 143);
+}
+
+.title {
+    font-weight: 900;
+}
+
+.project-item,
+.card {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.199);
+}
+
+img {
+    width: 3.5rem;
+}
+
+.big-icon {
+    width: 4rem;
+}
